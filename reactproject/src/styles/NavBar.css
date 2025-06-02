@@ -1,0 +1,18 @@
+.navbar-container {
+    width: 100%;
+    display: flex;
+    background-color: rgb(239, 239, 197);
+    justify-content: space-between;
+
+    .navbar-sections {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+
+
+        .categories-sections {
+        padding: 0px 30px
+        }
+    }
+}
