@@ -1,18 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .navbar-container {
     width: 100%;
     display: flex;
     background-color: rgb(239, 239, 197);
     justify-content: space-between;
+    height: 50px;
+    padding: 1rem;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
 
     .navbar-sections {
-        align-items: center;
+        font-weight: bold;
+        font-size: 1rem;
+        /* align-items: center;
         display: flex;
         justify-content: space-between;
-        padding: 5px;
+        padding: 5px; */
+        
+        p {
+            margin-left: 5px;
+        }
 
+        ul {
+            display: flex;
 
-        .categories-sections {
-        padding: 0px 30px
+            .categories-sections {
+            padding: 0px 30px;
+            list-style: none;
+            }
         }
     }
 }
