@@ -6,7 +6,7 @@ function NavBar () {
         <>
             <nav className="navbar-container">
                 <div className="navbar-sections">
-                    <p> HomesLibrary </p>
+                    <p> HomeBookstore </p>
                 </div>
                 <div className="navbar-sections">
                     <ul>
