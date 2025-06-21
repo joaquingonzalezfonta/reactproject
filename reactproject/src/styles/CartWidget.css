@@ -1,9 +1,7 @@
 .widget-container {
-    margin-right: 10px;
     cursor: pointer;
 
     .widget {
-        margin-right: 10px;
         display: flex;
     }
 
@@ -15,9 +13,11 @@
         position: relative;
         top: -10px;
         right: -10px;
+        text-align: center;
 
         p {
-            font-size: 10px;
+            margin: 0px;
+            font-size: 9px;
             color: white;
         }
     }

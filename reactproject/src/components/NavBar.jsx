@@ -7,24 +7,26 @@ function NavBar () {
         <>
             <nav className="navbar-container">
                 <div className="navbar-sections">
-                    <p> HomeBookstore </p>
+                    <p>
+                        <Link to='/' className='linkSections'> HomeBookstore </Link>
+                    </p>
                 </div>
                 <div className="navbar-sections">
-                    <ul>
+                    <ul className='listContainer'>
                         <li className="categories-sections">
-                            <Link to={`/categorias/mar`}> Mar </Link>
+                            <Link to='/Mar' className='linkSections'> Mar </Link>
                         </li>
                         <li className="categories-sections">
-                            <Link to={`/categorias/lago`}> Lago </Link>
+                            <Link to='/Lago' className='linkSections'> Lago </Link>
                         </li>
                         <li className="categories-sections">
-                            <Link to={`/categorias/ciudad`}> Ciudad </Link>
+                            <Link to='/Ciudad' className='linkSections'> Ciudad </Link>
                         </li>
                         <li className="categories-sections">
-                            <Link to={`/categorias/montaña`}> Montaña </Link>
+                            <Link to='/Montaña' className='linkSections'> Montaña </Link>
                         </li>
                         <li className="categories-sections">
-                            <Link to={`/categorias/bosaque`}> Bosque </Link>
+                            <Link to='/Bosque' className='linkSections'> Bosque </Link>
                         </li>
                     </ul>
                 </div>

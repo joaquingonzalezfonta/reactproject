@@ -16,27 +16,41 @@
     position: relative;
     margin-bottom: 15px;
 
+    .linkSections {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+            color: #235347;
+        }
+    }
+
     .navbar-sections {
         font-weight: bold;
         font-size: 1rem;
-        
+        display: flex;
+
+        .listContainer {
+            margin-bottom: 0px;
+        }
+
         p {
             margin-left: 5px;
             cursor: pointer;
+            margin-bottom: 0px;
         }
 
         ul {
             display: flex;
+            align-items: center;
 
             .categories-sections {
-            padding: 0px 30px;
-            list-style: none;
-            cursor: pointer;
-            transition: 0.3s;
-
-            &:hover {
-                color: #235347;
-            }
+                padding: 0px 30px;
+                list-style: none;
+                cursor: pointer;
+                transition: 0.3s;
+                display: flex;
             }
         }
     }

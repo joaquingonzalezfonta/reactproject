@@ -1,5 +1,11 @@
-h1 {
-    color: black;
+.principalTitle {
     justify-content: center;
     display: flex;
+    color: #235347;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
