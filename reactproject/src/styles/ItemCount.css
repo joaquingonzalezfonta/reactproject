@@ -1,0 +1,52 @@
+.counter {
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+}
+
+.itemCounterContainer {
+    border: 1px solid #8eb69b;
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+
+    .itemCounter {
+        margin: 0px;
+        color: #235347;
+    }
+}
+
+.buttonAdd {
+    border: 1px solid #8eb69b;
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+    margin-right: 5px;
+
+    &:hover {
+        background-color: #8eb69b;
+        border: 1px solid #8eb69b;
+    }
+
+    .itemCounter {
+        margin: 0px;
+        color: #235347;
+    }
+}
+
+.buttonSub {
+    border: 1px solid #8eb69b;
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+
+    &:hover {
+        background-color: #8eb69b;
+        border: 1px solid #8eb69b;
+    }
+
+    .itemCounter {
+        margin: 0px;
+        color: #235347;
+    }
+}

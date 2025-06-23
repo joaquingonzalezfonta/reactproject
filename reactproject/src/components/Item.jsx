@@ -1,8 +1,8 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
 import '../styles/Item.css'
+import { useNavigate } from 'react-router';
 
 function Item({ item }) {
+    const navigate = useNavigate()
     return (
         <>
             <div className="cardContainer">
@@ -17,11 +17,10 @@ function Item({ item }) {
                         <p> {item.description} </p>
                     </div>
                     <div className="buttonCardContainer">
-                        <button className='buttonCard'> Detalles </button>
+                        <button className='buttonCard' onClick={() => navigate(`/item/${item.id}`)}> Detalles </button>
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

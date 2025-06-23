@@ -1,8 +1,22 @@
 import '../styles/NavBar.css'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router'
+import Dropdown from 'react-bootstrap/Dropdown';
+import NavItem from 'react-bootstrap/NavItem';
+import NavLink from 'react-bootstrap/NavLink';
+import { useEffect, useState } from 'react';
 
-function NavBar () {
+function NavBar() {
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+    fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(data => {
+            const uniqueCategories = [...new Set(data.products.map(product => product.category))];
+            setCategories(uniqueCategories);
+        });
+}, []);
     return (
         <>
             <nav className="navbar-container">
@@ -12,23 +26,17 @@ function NavBar () {
                     </p>
                 </div>
                 <div className="navbar-sections">
-                    <ul className='listContainer'>
-                        <li className="categories-sections">
-                            <Link to='/Mar' className='linkSections'> Mar </Link>
-                        </li>
-                        <li className="categories-sections">
-                            <Link to='/Lago' className='linkSections'> Lago </Link>
-                        </li>
-                        <li className="categories-sections">
-                            <Link to='/Ciudad' className='linkSections'> Ciudad </Link>
-                        </li>
-                        <li className="categories-sections">
-                            <Link to='/Montaña' className='linkSections'> Montaña </Link>
-                        </li>
-                        <li className="categories-sections">
-                            <Link to='/Bosque' className='linkSections'> Bosque </Link>
-                        </li>
-                    </ul>
+
+                    <Dropdown as={NavItem}>
+                        <Dropdown.Toggle as={NavLink}> Categorias </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            {categories.map(cat => (
+                                <Dropdown.Item as={Link} to={`/category/${cat}`} key={cat}>
+                                    {cat}
+                                </Dropdown.Item>
+                            ))}
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </div>
                 <div className="navbar-sections">
                     <CartWidget />
