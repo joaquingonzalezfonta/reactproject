@@ -3,10 +3,12 @@
     border: 3px solid #8eb69b;
     border-radius: 5px;
     width: 300px;
-    /* display: flex; */
+    height: 300px;
+
 
     .imgCardContainer {
         padding: 5px 5px 0px 5px;
+        height: 150px;
 
         img {
             width: 100%;
@@ -18,12 +20,12 @@
         padding: 0px 5px 5px 5px;
 
         .titleCardContainer {
+            margin-top: 10px;
             display: flex;
             justify-content: center;
 
             h4 {
                 color: #235347;
-                height: 60px;
                 text-align: center;
             }
         }
@@ -55,6 +57,7 @@
                 border-radius: 5px;
                 border: 1px solid #8eb69b;
                 transition: 0.3s;
+                width: 100%;
 
                 &:hover {
                     background-color: #235347;

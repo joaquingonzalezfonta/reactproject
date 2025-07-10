@@ -1,16 +1,23 @@
 import '../styles/Cart.css'
 import { useCart } from '../context/useCart'
-import { Link } from 'react-router'
+import { useNavigate } from 'react-router'
+import Swal from 'sweetalert2'
+
 
 
 export default function Cart() {
     const { cart, deleteItemCart } = useCart()
+    const navigate = useNavigate()
 
 
     if (cart.length === 0) {
-        return (
-            <h2> No tienes productos en el carrito </h2>
-        )
+
+        Swal.fire({
+            icon: "info",
+            title: "Oops...",
+            text: "No tienes productos en el carrito!",
+        });
+
     }
 
     return (
@@ -26,9 +33,8 @@ export default function Cart() {
             </ul>
             <h3> Total: $12000000 </h3>
             <div className="btnContenedorCarrito">
-                    <Link to='/' className='linkCerrarCart'> 
-                        <button id="cerrar-carrito"> Cerrar </button>
-                    </Link>
+                <button onClick={() => navigate('/')} id="cerrar-carrito" className='buttonCarts'> Cerrar </button>
+                <button onClick={() => navigate('/checkout')} id="checkout-carrito" className='buttonCarts'> Ir al checkout </button>
             </div>
         </div>
     )

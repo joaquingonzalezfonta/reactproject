@@ -55,3 +55,12 @@
         }
     }
 }
+
+.categoriasNavBar {
+    color: white;
+    transition: 0.1s;
+
+    &:hover {
+        color: #235347;
+    }
+}

@@ -17,7 +17,7 @@ function NavBar() {
                 </div>
                 <div className="navbar-sections">
 
-                    <Dropdown as={NavItem}>
+                    <Dropdown className='categoriasNavBar' as={NavItem}>
                         <Dropdown.Toggle as={NavLink}> Categorias </Dropdown.Toggle>
                         <Dropdown.Menu>
                             {/* {categories.map(cat => (

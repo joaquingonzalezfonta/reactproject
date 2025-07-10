@@ -46,13 +46,13 @@
     display: flex;
     justify-content: center;
 
-    #cerrar-carrito {
+    .buttonCarts {
         padding: 5px 10px;
         background-color: #235347;
         color: white;
         border-radius: 5px;
         border: 1px solid #235347;
-        margin: 0 0 10px 0;
+        margin: 0 5px 10px 0;
         cursor: pointer;
     }
 }
@@ -66,6 +66,7 @@
 li {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
     
     .deleteButton {
         color: white;
@@ -74,7 +75,7 @@ li {
         border-radius: 5px;
         width: 60px;
         height: 30px;
-        margin-bottom: 3px;
+        margin-bottom: 5px;
         transition: 0.3s;
     }
 }
