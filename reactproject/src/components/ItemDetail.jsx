@@ -6,21 +6,18 @@ export default function ItemDetail({ item }) {
         <div className="bodyContainerDetail">
             <div className="cardContainerDetail">
                 <div className="imgCardContainerDetail">
-                    <img src={item?.thumbnail} alt={item?.title} />
+                    <img src={item?.image} alt={item?.category} />
                 </div>
                 <div className="bodyCardContainerDetail">
                     <div className="titleCardContainerDetail">
-                        <h4> {item?.title} </h4>
+                        <h4> {item?.home} </h4>
                     </div>
                     <div className="descriptionCardContainerDetail">
                         <p> {item?.description} </p>
                     </div>
                     <div className="buttonsCotainer">
                         <div>
-                            <ItemCount />
-                        </div>
-                        <div className="buttonCardContainerDetail">
-                            <button className='buttonCardDetail'> Comprar </button>
+                            <ItemCount item={item} />
                         </div>
                     </div>
                 </div>

@@ -7,11 +7,11 @@ function Item({ item }) {
         <>
             <div className="cardContainer">
                 <div className="imgCardContainer">
-                    <img src={item.thumbnail} alt={item.title} />
+                    <img src={item.image} alt={item.category} />
                 </div>
                 <div className="bodyCardContainer">
                     <div className="titleCardContainer">
-                        <h4> {item.title} </h4>
+                        <h4> {item.home} </h4>
                     </div>
                     <div className="descriptionCardContainer">
                         <p> {item.description} </p>

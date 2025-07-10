@@ -1,12 +1,16 @@
+.buttonCartNavBar {
+    background-color: #235347;
+}
+
 .widget-container {
     cursor: pointer;
-
+    
     .widget {
         display: flex;
     }
-
+    
     .widget-number {
-        background-color: #235347;
+        background-color: #8eb69b;
         border-radius: 50%;
         width: 12px;
         height: 12px;
