@@ -1,4 +1,3 @@
-
 #overlay {
     position: fixed;
     top: 0;
@@ -67,15 +66,24 @@ li {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
-    
-    .deleteButton {
-        color: white;
-        background-color: #235347;
-        border: 1px solid #235347;
-        border-radius: 5px;
-        width: 60px;
-        height: 30px;
-        margin-bottom: 5px;
-        transition: 0.3s;
+
+    .contenedorInfoCart {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedorButtonCart {
+        display: flex;
+        align-items: center;
+
+        .deleteButton {
+            color: white;
+            background-color: #235347;
+            border: 1px solid #235347;
+            border-radius: 5px;
+            width: 60px;
+            height: 40px;
+            transition: 0.3s;
+        }
     }
 }

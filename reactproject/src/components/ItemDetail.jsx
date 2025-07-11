@@ -10,7 +10,7 @@ export default function ItemDetail({ item }) {
                 </div>
                 <div className="bodyCardContainerDetail">
                     <div className="titleCardContainerDetail">
-                        <h4> {item?.locality} </h4>
+                        <h4> {item?.locality} - ${item?.price}</h4>
                     </div>
                     <div className="descriptionCardContainerDetail">
                         <p> {item?.description} </p>

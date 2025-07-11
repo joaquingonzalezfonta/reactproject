@@ -1,4 +1,4 @@
-import { getFirestore, collection, query, where, getDocs, doc, getDoc } from "firebase/firestore";
+import { getFirestore, collection, query, where, getDocs, doc, getDoc, addDoc  } from "firebase/firestore";
 import { app } from './config'
 
 const db = getFirestore(app);
@@ -36,4 +36,9 @@ export const getItem = async (id) => {
         // docSnap.data() will be undefined in this case
         console.log("No such document!");
     }
+}
+
+export const createOrder = async (order) => {
+    const docRef = await addDoc(collection(db, "orders"), order);
+console.log("Document written with ID: ", docRef.id);
 }

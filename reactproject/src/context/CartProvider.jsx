@@ -1,7 +1,7 @@
 import { CartContext } from './CartContext'
 import { useState } from 'react'
 
-function CartProvider ({ children }) {
+function CartProvider({ children }) {
     const [cart, setCart] = useState([])
 
     const addToCart = (product) => {
@@ -10,8 +10,8 @@ function CartProvider ({ children }) {
 
     const getQuantity = () => {
         const quantities = cart.map(prod => prod.quantity)
-        const total = quantities.reduce((acc, current) => acc + current, 0) 
-    
+        const total = quantities.reduce((acc, current) => acc + current, 0)
+
         return total
     }
 
@@ -19,10 +19,21 @@ function CartProvider ({ children }) {
         setCart(cartPrev => cartPrev.filter(item => item.id !== id))
     }
 
+    const totalPriceItem = (id) => {
+        const item = cart.find(prod => prod.id === id)
+        if (!item) return 0
+
+        return item.price * item.quantity
+    }
+
+    const resultadoTotal = () => {
+        return cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
+    }
+
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, getQuantity, deleteItemCart }}>
-            { children }
+        <CartContext.Provider value={{ cart, addToCart, getQuantity, deleteItemCart, totalPriceItem, resultadoTotal }}>
+            {children}
         </CartContext.Provider>
     )
 }

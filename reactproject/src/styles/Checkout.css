@@ -1,0 +1,20 @@
+.formCheckout {
+    width: 300px;
+    border: 1px solid #235347;
+    border-radius: 5px;
+    padding: 10px;
+
+    .buttonForm {
+        background-color: #235347;
+        color: white;
+        border: 1px solid #235347;
+        width: 278px;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: white;
+            color: #235347;
+            border: 1px solid #235347;
+        }
+    }
+}
