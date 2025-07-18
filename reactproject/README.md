@@ -1,12 +1,31 @@
-# React + Vite
+# Ecommerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto de ecommerce desarrollado en React que permite:
 
-Currently, two official plugins are available:
+- Visualizar productos.
+- Filtrar productos por categorías.
+- Agregar productos al carrito.
+- Visualizar el carrito con los productos agregados.
+- Realizar el proceso de checkout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- **React**
+- **React Router**  
+  [Documentación oficial](https://reactrouter.com/en/main)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Firebase**  
+  [Documentación oficial](https://firebase.google.com/docs)
+
+- **React Bootstrap**  
+  [Documentación oficial](https://react-bootstrap.netlify.app/)
+
+- **React Toastify**  
+  [Documentación oficial](https://fkhadra.github.io/react-toastify/introduction)
+
+- **SweetAlert2**  
+  [Documentación oficial](https://sweetalert2.github.io/)
+
+## Autor
+
+Joaquin Gonzalez
