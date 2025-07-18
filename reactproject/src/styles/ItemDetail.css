@@ -3,68 +3,67 @@
     justify-content: center;
 
     .cardContainerDetail {
-    margin: 10px;
-    border: 3px solid #8eb69b;
-    border-radius: 5px;
-    width: 500px;
+        margin: 10px;
+        border: 3px solid #8eb69b;
+        border-radius: 5px;
+        width: 500px;
 
-    .imgCardContainerDetail {
-        padding: 5px 5px 0px 5px;
+        .imgCardContainerDetail {
+            padding: 5px 5px 0px 5px;
 
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .bodyCardContainerDetail {
-        padding: 0px 5px 5px 5px;
-
-        .titleCardContainerDetail {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-
-            h4 {
-                color: #235347;
-                text-align: center;
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
 
-        .descriptionCardContainerDetail {
-            display: flex;
-            justify-content: center;
-            padding: 5px;
-            text-align: center;
+        .bodyCardContainerDetail {
+            padding: 0px 5px 5px 5px;
 
-            p {
-                margin-bottom: 0px;
+            .titleCardContainerDetail {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+
+                h4 {
+                    color: #235347;
+                    text-align: center;
+                }
             }
-        }
 
-        .buttonCardContainerDetail {
-            display: flex;
-            justify-content: center;
-            margin: 5px 0px;
-
-            .buttonCardDetail {
-                background-color: #8eb69b;
-                color: white;
+            .descriptionCardContainerDetail {
+                display: flex;
+                justify-content: center;
                 padding: 5px;
-                border-radius: 5px;
-                border: 1px solid #8eb69b;
-                transition: 0.3s;
-                margin-top: 5px;
-                padding: 5px 40px ;
-                cursor: pointer;
+                text-align: center;
 
-                &:hover {
-                    background-color: #235347;
-                    border: 1px solid #235347;
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+
+            .buttonCardContainerDetail {
+                display: flex;
+                justify-content: center;
+                margin: 5px 0px;
+
+                .buttonCardDetail {
+                    background-color: #8eb69b;
+                    color: white;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: 1px solid #8eb69b;
+                    transition: 0.3s;
+                    margin-top: 5px;
+                    padding: 5px 40px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #235347;
+                        border: 1px solid #235347;
+                    }
                 }
             }
         }
     }
 }
-}
-

@@ -9,16 +9,16 @@ function CartWidget() {
     const navigate = useNavigate()
     return (
         <>
-        <button className='buttonCartNavBar' onClick={() => navigate('/cart')}>
-            <div className="widget-container">
-                <div className="widget">
-                    🛒
+            <button className='buttonCartNavBar' onClick={() => navigate('/cart')}>
+                <div className="widget-container">
+                    <div className="widget">
+                        🛒
+                    </div>
+                    <div className="widget-number">
+                        <p> {quantity}</p>
+                    </div>
                 </div>
-                <div className="widget-number">
-                    <p> {quantity}</p>
-                </div>
-            </div>
-        </button>
+            </button>
         </>
     )
 }

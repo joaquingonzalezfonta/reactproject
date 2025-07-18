@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router';
 
 export default function Checkout() {
 
-    const { cart, deleteItemsCart} = useCart()
+    const { cart, deleteItemsCart } = useCart()
     const navigate = useNavigate()
 
     const handleSubmit = (evt) => {
@@ -30,30 +30,30 @@ export default function Checkout() {
     }
 
     const feedbacKPagoExitoso = async (orderData) => {
-    try {
-        const orderId = await createOrder(orderData);
+        try {
+            const orderId = await createOrder(orderData);
 
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Orden creada exitosamente",
-            text: `Tu ID de orden es: ${orderId}`,
-            showConfirmButton: false,
-            timer: 5000
-        }).then(() => {
-            navigate('/');
-            deleteItemsCart();
-    });
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Orden creada exitosamente",
+                text: `Tu ID de orden es: ${orderId}`,
+                showConfirmButton: false,
+                timer: 5000
+            }).then(() => {
+                navigate('/');
+                deleteItemsCart();
+            });
 
-    } catch (error) {
-        console.error('Error al crear la orden:', error);
-        Swal.fire({
-            icon: "error",
-            title: "Error",
-            text: "No se pudo crear la orden. Intenta nuevamente."
-        });
-    }
-};
+        } catch (error) {
+            console.error('Error al crear la orden:', error);
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "No se pudo crear la orden. Intenta nuevamente."
+            });
+        }
+    };
 
     return (
         <div className='d-flex justify-content-center mt-5'>

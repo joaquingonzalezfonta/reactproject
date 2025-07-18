@@ -19,7 +19,6 @@ export const getItemsByCategory = async (category) => {
     const querySnapshot = await getDocs(q);
     const items = []
     querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
         items.push({ ...doc.data(), id: doc.id })
     });
 
