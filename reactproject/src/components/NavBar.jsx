@@ -1,9 +1,8 @@
 import '../styles/NavBar.css'
 import CartWidget from './CartWidget'
-import { Link } from 'react-router'
+import { NavLink } from 'react-router'
 import Dropdown from 'react-bootstrap/Dropdown';
 import NavItem from 'react-bootstrap/NavItem';
-import NavLink from 'react-bootstrap/NavLink';
 
 function NavBar() {
 
@@ -12,32 +11,27 @@ function NavBar() {
             <nav className="navbar-container">
                 <div className="navbar-sections">
                     <p>
-                        <Link to='/' className='linkSections'> HomeBookstore </Link>
+                        <NavLink to='/' className='linkSections'> HomeBookstore </NavLink>
                     </p>
                 </div>
                 <div className="navbar-sections">
 
                     <Dropdown className='categoriasNavBar' as={NavItem}>
-                        <Dropdown.Toggle as={NavLink}> Categorias </Dropdown.Toggle>
+                        <Dropdown.Toggle className='linkSections' as={NavLink}> Categorias </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            {/* {categories.map(cat => (
-                                <Dropdown.Item as={Link} to={`/category/${cat}`} key={cat}>
-                                    {cat}
-                                </Dropdown.Item>
-                            ))} */}
-                            <Dropdown.Item as={Link} to={`/category/bosque`}>
+                            <Dropdown.Item as={NavLink} to={`/category/bosque`}>
                                 Bosque
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to={`/category/montaña`}>
+                            <Dropdown.Item as={NavLink} to={`/category/montaña`}>
                                 Montaña
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to={`/category/ciudad`}>
+                            <Dropdown.Item as={NavLink} to={`/category/ciudad`}>
                                 Ciudad
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to={`/category/mar`}>
+                            <Dropdown.Item as={NavLink} to={`/category/mar`}>
                                 Mar
                             </Dropdown.Item>
-                            <Dropdown.Item as={Link} to={`/category/lago`}>
+                            <Dropdown.Item as={NavLink} to={`/category/lago`}>
                                 Lago
                             </Dropdown.Item>
                         </Dropdown.Menu>

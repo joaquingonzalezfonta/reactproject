@@ -16,8 +16,10 @@ export default function Cart() {
             icon: "info",
             title: "Oops...",
             text: "No tienes productos en el carrito!",
+            confirmButtonText: "Agregar",
+        }).then(() => {
+            navigate('/')
         });
-
     }
 
     const deleteItemAlert = (id) => {

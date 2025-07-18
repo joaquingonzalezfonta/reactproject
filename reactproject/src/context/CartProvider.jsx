@@ -5,8 +5,20 @@ function CartProvider({ children }) {
     const [cart, setCart] = useState([])
 
     const addToCart = (product) => {
-        setCart([...cart, product])
-    }
+    setCart(prevCart => {
+        const productInCart = prevCart.find(item => item.id === product.id);
+
+        if (productInCart) {
+            return prevCart.map(item =>
+                item.id === product.id
+                    ? { ...item, quantity: item.quantity + product.quantity }
+                    : item
+            );
+        } else {
+            return [...prevCart, product];
+        }
+    });
+};
 
     const getQuantity = () => {
         const quantities = cart.map(prod => prod.quantity)
@@ -17,6 +29,10 @@ function CartProvider({ children }) {
 
     const deleteItemCart = (id) => {
         setCart(cartPrev => cartPrev.filter(item => item.id !== id))
+    }
+
+    const deleteItemsCart = () => {
+        setCart([]);
     }
 
     const totalPriceItem = (id) => {
@@ -32,7 +48,7 @@ function CartProvider({ children }) {
 
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, getQuantity, deleteItemCart, totalPriceItem, resultadoTotal }}>
+        <CartContext.Provider value={{ cart, addToCart, getQuantity, deleteItemCart, totalPriceItem, resultadoTotal, deleteItemsCart }}>
             {children}
         </CartContext.Provider>
     )
